@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<title>观点_砍柴网</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="{ms:globalskin.url/}/css/style.css">
+	<link rel="stylesheet" type="text/css" href="{ms:globalskin.url/}/css/list.css">
+	<script type="text/javascript" src="{ms:globalskin.url/}/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="{ms:globalskin.url/}/js/Common.js"></script>
+	<script type="text/javascript" src="{ms:globalskin.url/}/js/script.js"></script>
+	<script type="text/javascript" language="javascript" src="{ms:globalskin.url/}/js/jquery.easing.1.3.js">
+	</script>
+	<script type="text/javascript" language="javascript" src="{ms:globalskin.url/}/js/jquery.skitter.min.js">
+	</script>
+</head>
+<body>
+{ms:include filename=head.htm/} 
+<!--主体开始-->
+<div class="content">
+	<div class="content_home">
+		<div class="home_left">
+			<div class="hlgd">
+				<div class="hlgd-title">
+					<div class="hlgdttxt">{ms:field.typetitle/}</div>
+					<hr>
+				</div>
+				<div class="hlgd-content">
+					<!--循环-->
+					{ms:arclist size=6  ispaging=true}
+          			<div class="hlgd-box">
+						<dl>
+							<dt>
+								<a href="[field.link/]" target="_blank" > 
+									<img src="[field.litpic/]"  width="250" height="165"> 
+								</a>
+							</dt>
+							<dd>
+								<h3>
+									<span class="dj">[field.typename/]</span>
+									<a href="[field.link/]" target="_blank" >[field.title/]</a>
+								</h3>
+								<p>[field.descrip/].</p>
+								<p>[field.source/]  /  [field.author/]  / [field.date fmt=yyyy-MM-dd hh:mm:ss/]</p>
+							</dd>
+						</dl>
+					</div>
+					{/ms:arclist}
+					<!--循环结束-->			
+					<div class="hlgd-page page-nav">
+						<ul class="pagination">
+							 <li><a href="{ms:page.index/}" class="row">首页</a></li>
+							 <li><a href="{ms:page.pre/}">上一页</a></li>
+							 <li><a href="{ms:page.next/}">下一页</a></li>
+							 <li><a href="{ms:page.last/}">最末页</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		{ms:include filename=comment.htm/} 
+		<div class="hrtjzz" style="float:right;">
+		    <div class="hrtjzz-title">
+		      <div class="hrtjzztxt">推荐作者</div>
+		      <hr>
+		    </div>
+		    <div class="hrtjzz-content"> 
+		      	{ms:arclist size=7 typeid=29}
+		      	<div class="tjzz-box">
+			        <dl>
+			          <dt><a href="#" target="_blank" ><img src="[field.litpic/]" class="thumb" alt="" width="73" height="73"></a></dt>
+			          <dd>
+			            <h3><a href="[field.link/]" target="_blank" title="俞永福">[field.author/]</a></h3>
+			            <p><a href="[field.link/]" target="_blank" title="俞永福">[field.title/]</a></p>
+			          </dd>
+			        </dl>
+		      	</div>  
+		      	{/ms:arclist}  
+	    	</div>
+	  	</div>
+	</div>  
+</div>
+<!--主体结束-->
+<!--底部开始-->
+{ms:include filename=foot.htm/} 
+</body>
+</html>
